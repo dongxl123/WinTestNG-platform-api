@@ -1,0 +1,37 @@
+server:
+  port: 9009
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/win_testng?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+    username: root
+    password: 123456
+  data:
+    mongodb:
+      repositories:
+        enabled: false
+  freemarker:
+    settings: {template_update_delay: 0}
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
+  redis:
+    host: localhost
+    port: 3736
+    password: 123456
+    database: 10
+project:
+  filePath: files
+  domain: http://localhost:9009
+aliyun:
+  oss:
+    accessId: yourAccessId
+    accessKey: yourAccessKey
+    ossBucketName: yourBucketName
+cas:
+  server-url-prefix: https://sso.winbaoxian.cn
+  server-login-url: https://sso.winbaoxian.cn/login
+  server-logout-url: https://sso.winbaoxian.cn/logout
+  client-host-url: http://www.suiyiwen.com:9998
+  logout-redirect-url: https://testplatform.winbaoxian.cn
+  authentication-url-ignore-patterns: /api/winCas/logout,/static/*,/view/*,/tool/*

@@ -1,0 +1,6 @@
+trigger_build_doc:
+  stage: deploy
+  only:
+  - master
+  script:
+  - curl -X POST https://jenkins.winbaoxian.cn/jenkins/job/bxs-apidoc/buildWithParameters --user dongxuanliang252:110e0732fde118c802cb616637fd47278d  -d 'group=wy_test&projectName=wintestng-platform-api&branch=master'
